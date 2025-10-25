@@ -12,8 +12,8 @@ function AddKongVersion:header_filter(conf)
 
   kong.log.debug("Add-Kong-Version plugin executing in header_filter phase")
   local version = kong.version or "unknown"
-  kong.response.set_header("X-***********-Kong-Gateway-Version", version)
-  kong.response.set_header("X-**********-Custom-Header", "THIS IS ADDED BY CUSTOM PLUGIN")
+  kong.response.set_header("X-#%#%#%#%#%#%#-Kong-Gateway-Version", version)
+  kong.response.set_header("X-#%#%#%#%#%#%#-Custom-Header", "THIS IS ADDED BY CUSTOM PLUGIN")
   kong.log.debug("Attempting to set version header: ", version)
 end
 

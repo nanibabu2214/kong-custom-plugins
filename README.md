@@ -8,10 +8,10 @@ A simple plugin that adds Kong version information to requests and responses. Th
 
 ### Features
 
-- Adds `X-Kong-Gateway-Version` header to both:
+- Adds `X-#%#%#%#%#%#%#-Kong-Gateway-Version` header to both:
   - Requests forwarded to upstream services
   - Responses sent back to clients
-- Adds a custom header `X-Custom-Header` with a static message
+- Adds a custom header `X-#%#%#%#%#%#%#-Custom-Header` with a static message
 - Can be enabled/disabled via configuration
 - Works on both HTTP and HTTPS traffic
 
