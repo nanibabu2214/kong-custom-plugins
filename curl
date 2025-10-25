@@ -1,0 +1,24 @@
+ curl -X POST "http://localhost:8001/services" \
+     --json '{
+       "name": "example_service",
+       "url": "https://httpbin.konghq.com/anything"
+     }'
+
+
+
+      curl -X POST "http://localhost:8001/services/example_service/routes" \
+     --json '{
+       "name": "example_route",
+       "paths": [
+         "/mock"
+       ]
+     }'
+
+
+      curl -X POST "http://localhost:8001/services/example_service/plugins" \
+     --json '{
+       "name": "add-kong-version",
+       "config": {
+        "add_version_header":true
+       }
+     }'
