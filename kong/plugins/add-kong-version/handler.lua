@@ -22,6 +22,7 @@ function AddKongVersion:access(conf)
   if conf.add_version_header then
     local version = kong.version or "unknown"
     kong.service.request.set_header("X-Kong-Gateway-Version", version)
+    kong.service.request.set_header("custom-stuff-here", "Hello from cust")
     kong.log.debug("Set request header X-Kong-Gateway-Version: ", version)
   end
 end
